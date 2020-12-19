@@ -1,0 +1,19 @@
+version: '3.5'
+
+services:
+
+  node:
+    container_name: ${COMPOSE_PROJECT_NAME}_node
+    image: top-node/topio:dev
+    build: ./docker
+    restart: always
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./data-node:/root/Topnetwork
+    command: >-
+      --register_deposit 200000000000
+      --node_type edge
+      --nodename ${TOPIO_NODE_NAME}
+      --node_account_addr ${TOPIO_ACCOUNT_ADDR}
+      --node_sign_keystore /root/Topnetwork/keystore/${TOPIO_KEY}
+      --password ${TOPIO_KEY_PASSWORD}
