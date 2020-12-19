@@ -11,7 +11,7 @@
 
 ## :arrow_forward: Usage
 
-You can clone this repository or use the provided `Dockerfile` and `docker-compose.yml` as a base template for your own setup.
+You can clone this repository or use the provided `docker/Dockerfile` and `docker-compose.yml` as a base template for your own setup.
 
 A `Makefile` is included for convenience but `make` is not required to run the node.
 
